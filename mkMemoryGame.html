@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="mkMemoryGame.css" media="screen">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="mainContainer">
+    <div class="container">
+        <div class="content">
+        <div class="greet">
+            <h1>Welcome to</h1>
+            <h1>Memory Game</h1>
+        </div>      
+        <div class="Interface">         
+            <button id="start">Start</button>
+            <button id="option">Option</button>
+        </div>        
+        </div>
+        <div class="optionContent">
+            <h2>Choose Difficulty</h2>
+            <div class="level">
+                <button value="12">Easy</button>
+                <button value="24">Medium</button>
+                <button value="40">Hard</button>
+            </div>
+            <div class="interface">
+                <button id="back">Go back</button>
+            </div>         
+        </div>  
+        <div id="game"></div>
+    </div> 
+    <div class="timeAndScore">
+        <div class="time">
+            <p>Time: &nbsp;</p>
+            <p id="seconds"></p>
+        </div>
+        <div class="score">
+            <p>Score: &nbsp;</p>
+            <p id="points"></p>
+        </div>
+    </div>
+    <div class="results">
+        <h2>Your score is</h2>
+        <h2 id="scoreResults"></h2>
+    </div>
+</div>
+    <script src="mkMemoryGame.js"></script>
+</body>
+</html>

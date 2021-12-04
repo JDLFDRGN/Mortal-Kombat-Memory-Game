@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+    display: grid;
+    background: url("backGround.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.mainContainer{
+    background-color: black;
+    width: 400px;
+    height: 80%;
+}
+.container{
+    height: 100%;
+    background-color: black;
+}
+.content{
+    border: 1px solid black;
+    height: 100%;   
+    display: grid;
+    place-items: center;
+}
+.Interface{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+}
+.Interface>button{
+    width: 130px;
+    height: 50px;
+}
+.interface{
+    display: grid;
+}
+.greet{
+    width: 80%;
+    display: grid;
+}
+h1{ 
+    justify-self: center;
+    font-size: 40px;
+    color: yellowgreen;
+}
+h2{
+    color: yellowgreen;
+    font-size: 40px;
+}
+button{
+    background-color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    border-radius: 15px;
+    width: 100px;
+}
+.optionContent{
+    height: 100%;
+    display: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+}
+.level{
+    display: grid;
+    grid-row-gap: 10px;
+}
+#game{
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    grid-gap: 10px;
+}
+.easy{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.medium{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.hard{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition-duration: 1s;
+    background-color: orangered;
+}
+.frontCard{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("Cards/MKlogo.png");
+    background-size: 100% 100%;
+    display: grid;
+    place-items: center;
+    backface-visibility: hidden;
+}
+.backCard{
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    transform: rotateY(180deg);
+    display: grid;
+    place-items: center;
+    color: transparent;
+}
+.timeAndScore{
+    font-size: larger;
+    visibility: hidden;
+    padding: 10px;
+    width: 400px;
+    background-color: black;
+    color: greenyellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.time{
+    display: flex;
+}
+.score{
+    display: flex;
+}
+.results{
+    display: none;
+    place-items: center;
+}
+@media only screen and (max-height: 500px) and (orientation: landscape){
+    .easy{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .medium{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .hard{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
